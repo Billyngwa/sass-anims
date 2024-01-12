@@ -1,0 +1,234 @@
+@import "./settings/variables";
+@import "./settings/resets";
+@import "./settings/mixins";
+@import "./settings/animations";
+
+div.anim{
+    height: 100px;
+    width: 100px;
+    background-color: teal;
+    border-radius: 5px;
+    margin:40px 30px;
+    position: relative;
+    animation-name: box-rotator;
+    animation-duration:2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:alternate-reverse;
+}
+div.dodge{
+
+    background-color: black;
+    height: 100px;
+    width: 100px;
+    background-color: teal;
+    border-radius: 5px;
+    margin:40px 30px;
+    position: relative;
+    animation-name: bubble-player;
+    animation-duration:3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    animation-direction:alternate;
+
+}
+
+/* code initialisation */
+*{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.big-heading{
+    text-align: center;
+    color: blueviolet;
+}
+
+form.sign-in-form {
+    width: 40%;
+    margin: 50px auto;
+    background-color: rgba(206, 228, 228, 0.388);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: -20px -10px 30px 2px rgba(0, 0, 0, 0.265);
+}
+
+h1.welcome-message{
+    text-align: center;
+    color: rgb(250, 176, 5);
+    font-size: 18px;
+    font-weight: 500;
+    font-family: 'poppins';
+}
+p.emoji{
+    text-align: center;
+    padding: 10px 0px 10px 0px ;
+}
+
+div.signintext h1 {
+    font-family: 'poppins';
+    font-weight: 600;
+
+    font-size: 32px;
+
+    Line-Height: 38px;
+
+    Color: rgb(24, 49, 83);
+
+    font-style: normal;
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.signin-desc {
+    font-family: 'poppins';
+    font-weight: 400;
+
+    font-size: 16px;
+
+    Line-Height: 38px;
+
+    Color: rgb(24, 49, 83);
+    padding: 15px 0px;
+
+    font-style: normal;
+    text-align: center;
+}
+
+.email label, .password label {
+    font-family: 'poppins';
+    font-weight: 500;
+
+    font-size: 16px;
+
+    line-height: 24px;
+
+    Color: rgb(24, 49, 83);
+
+    font-style: normal;
+    
+}
+p.email,p.password{
+    padding: 18px 0px;
+
+}
+.email input, .password input {
+    display: block;
+    font-weight: 700;
+
+    font-size: 16px;
+
+    line-height: 24px;
+
+    Color: rgb(24, 49, 83);
+
+    font-style: normal;
+    border-radius: 10px;
+    border: 2px solid rgb(24, 49, 83);
+    /* outline: 2px solid red; */
+    padding: 15px 60px 15px 15px;
+    width: 90%;
+    margin-left: 3%;
+    
+}
+.email input:focus, .password input:focus{
+        outline: 3px solid rgba(0, 102, 255, 0.627);
+        border: 2px solid rgba(24, 49, 83, 0.68);
+
+}
+
+.email input::placeholder{
+    font-weight: 700;
+
+    font-size: 15px;
+
+    line-height: 24px;
+
+    Color: rgb(24, 49, 83);
+
+    font-style: normal;
+}
+.sex{
+    display: flex;
+    gap: 30px;
+}
+.rem-me{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+p.left-col, i  {
+    color:rgb(24, 49, 83) ;
+}
+p.left-col small{
+    color:rgb(24, 49, 83) ;
+    font-family: 'poppins';
+}
+p.forgot-pwsd {
+    font-family: 'poppins';
+    font-size: 400;
+    font-style:normal;
+    
+    color: rgb(24, 49, 83);
+    font-size: 16px;
+}
+p.forgot-pwsd a{
+    color: rgb(20, 110, 190);
+
+    text-decoration: none;
+    border-bottom: 1px dotted rgb(20, 110, 190) ;
+
+}
+p.forgot-pwsd a:hover{
+    color: rgb(74, 160, 236);
+
+}
+p.btn {
+    padding: 30px 0px;
+    width: 100%;
+}
+p.btn button[type='submit'] {
+    border: none;
+    outline: none;
+    background-color:rgb(250, 176, 5) ;
+    color:rgb(24, 49, 83) ;
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+    font-family: 'poppins';
+    font-weight: 600;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    box-shadow: 1px 2px 1px 4px rgb(24, 49, 83)  ;
+    cursor: pointer;
+}
+p.btn button[type='submit'] i{
+    font-size: 25px;
+}
+
+p.dont-have-account{
+    
+    font-family: 'poppins';
+    font-size: 400;
+    font-style:normal;
+    
+    color: rgb(24, 49, 83);
+    font-size: 16px;
+    text-align: center;
+}
+p.dont-have-account a{
+    color: rgb(20, 110, 190);
+
+    text-decoration: none;
+    border-bottom: 1px dotted rgb(20, 110, 190) ;
+
+}
+p.dont-have-account a:hover{
+    color: rgb(74, 160, 236);
+
+}

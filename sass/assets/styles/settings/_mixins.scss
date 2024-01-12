@@ -1,0 +1,14 @@
+@mixin fixed-container(){
+    width: 80%;
+    margin-left: 10%;
+}
+@mixin varying-container($width,$ml){
+    width: $width;
+    margin-left:$ml;
+}
+@mixin character-style($fs,$fw,$color){
+    font-size: $fs;
+    font-weight: $fw;
+    color:$color;
+    font-family: $font-family;
+}

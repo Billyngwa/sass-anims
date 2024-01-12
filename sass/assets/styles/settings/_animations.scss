@@ -1,0 +1,32 @@
+@keyframes box-rotator{
+    from{
+        bottom: 70px;
+        background-color: red;
+        // margin-left: 7%;
+    }
+    to{
+        bottom: 50px;
+    }
+}
+@keyframes bubble-player{
+    25%{
+        bottom:100px;
+        left:10%;
+        background-color: rgba(255, 0, 0, 0.537);
+    }
+    50%{
+        bottom:100px;
+        left:40%;
+        background-color: rgba(203, 255, 47, 0.818);
+    }
+    75%{
+        bottom:0px;
+        left:40%;
+        background-color: aquamarine;
+    }
+    100%{
+        bottom:0px;
+        left:10%;
+        background-color: yellow;
+    }
+}
