@@ -12,3 +12,8 @@
     color:$color;
     font-family: $font-family;
 }
+@mixin display-element-flex($justify,$align){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}

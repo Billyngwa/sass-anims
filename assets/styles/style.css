@@ -39,6 +39,90 @@ ul {
     background-color: yellow;
   }
 }
+header {
+  background-color: teal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+}
+header .logo {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 30%;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  font-family: "poppins";
+  cursor: pointer;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav ul li {
+  margin-left: 30px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 500;
+  color: orange;
+  font-family: "poppins";
+}
+header nav ul li:hover {
+  font-size: 25px;
+  font-weight: 500;
+  color: #fff;
+  font-family: "poppins";
+  background-color: orange;
+  padding: 3px;
+  border-radius: 5px;
+}
+header nav.mobile {
+  display: none;
+}
+header nav.mobile.active {
+  display: block;
+}
+header nav.mobile ul {
+  display: block;
+}
+header div.hamburger {
+  cursor: pointer;
+  display: none;
+}
+header div.hamburger p.ham {
+  width: 25px;
+  height: 3px;
+  background-color: black;
+  margin: 5px 2px;
+  border-radius: 4px;
+  transition: 2s;
+}
+header div.hamburger p:nth-child(2) {
+  width: 18px;
+}
+header div.hamburger p:nth-child(2).active {
+  width: 0px;
+  transition: 1s;
+}
+header div.hamburger p:nth-child(1).active {
+  transform: rotate(-43deg) translate(-10px);
+  transition: 2s;
+}
+header div.hamburger p:nth-child(3).active {
+  transform: rotate(49deg) translate(-11px);
+  transition: 2s;
+}
+
+@media (max-width: 500px) {
+  nav.desktop {
+    display: none;
+  }
+  div.hamburger {
+    display: block !important;
+  }
+}
 div.anim {
   height: 100px;
   width: 100px;

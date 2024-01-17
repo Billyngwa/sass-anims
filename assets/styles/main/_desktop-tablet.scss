@@ -1,0 +1,89 @@
+header{
+    background-color: teal;
+    @include display-element-flex(space-between,center);
+    // gap: 10em;
+    padding: 20px 50px;
+
+    .logo{
+        background-color: orange;
+        padding: 10px;
+        border-radius: 30%;
+        @include character-style(20px, 400, #fff);
+        cursor: pointer;
+    }
+    nav{
+        ul{
+            @include display-element-flex(space-between,center);
+            li{
+                margin-left: 30px;
+                cursor: pointer;
+                @include character-style(25px, 500,orange);
+                &:hover{
+                    @include character-style(25px, 500,#fff);
+                    background-color: orange;
+                    padding: 3px;
+                    border-radius: 5px;
+
+
+                }
+            }
+        }
+        &.mobile{
+            display: none;
+            &.active{
+                display: block;
+            }
+            ul{
+                display:block;
+            }
+        }
+    }
+    div.hamburger{
+        cursor: pointer;
+        display: none;
+
+        p.ham{
+            width: 25px;
+            height: 3px;
+            background-color: black;
+            margin: 5px 2px;
+            border-radius: 4px;
+            transition: 2s;
+
+            // &.active{}
+        }
+        p:nth-child(2){
+            width:18px ;
+            &.active{
+                width: 0px;
+                transition: 1s;
+
+            }
+        }
+        p:nth-child(1){
+            &.active{
+                transform: rotate(-43deg) translate(-10px); 
+                transition: 2s;
+            }
+        }
+        
+        p:nth-child(3){
+            &.active{
+                transform: rotate(49deg) translate(-11px); 
+                transition: 2s;
+
+            }
+        }
+    }
+}
+
+@media (max-width:500px){
+    nav.desktop{
+        display:none;
+    }
+    div.hamburger{
+        display: block!important;
+
+    }
+    
+}
