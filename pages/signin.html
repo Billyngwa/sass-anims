@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <title>User Management system</title>
+</head>
+<body>
+    <main>
+        <h1 class="big-heading">Start building your way to the moon</h1>
+
+        <form action="#" method="post" class="sign-in-form">
+            <p class="wlcm-msg-emoji">
+                <h1 class="welcome-message">Welcome back</h1>
+                <p class="emoji">😄</p>
+            </p>
+            <div class="sign-in-text">
+                <h1 class="sign-in">
+                    Sign In
+                </h1>
+                <p class="signin-desc">
+                    Let's get you started  and straight to the icons.
+                </p>
+            </div>
+            <p class="email">
+                <label for="email">email</label>
+                <input type="email" placeholder="example@gmail.com" name="email" required/>
+            </p>
+            <p class="password" style="display: flex; justify-content: space-between; align-items: center;">
+                <label for="password">password </label>
+                <input type="password" name="password" required/>
+                <p class="eye">
+                    <i class="fa-solid fa-eye-slash"></i>
+                </p>
+            </p>
+            <div class="forgot-password">
+                <div class="show-password">
+                    <input type="checkbox" name="show-password" id="">
+                </div>
+                <div class="passwordreset">
+                    <a href="./forgot-password.html">Forgot password?</a>
+                </div>
+            </div>
+            <p class="btn">
+                <button type="submit">Sign In<i class="fa-solid fa-right-to-bracket"></i></button>
+            </p>
+            <p class="dont-have-account">
+                Don't have an account? <a href="../index.html">Sign up and get started! </a>
+            </p>
+        </form>
+    </main>
+    <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
+    <script >
+        const base_url = 'http://localhost:3000/auth/signin';
+
+const signinForm = document.querySelector('.sign-in-form');
+const checkBox = document.querySelector('input[type="checkbox"]');
+const password = document.querySelector('input[name="password"]');
+
+checkBox.addEventListener("click",(e)=>{
+    checkBox.classList.toggle("active")
+    password.classList.toggle("active");
+
+    if(password.classList.contains("active")){
+        password.type = "text"
+    }else{
+        password.type = "password"
+    }
+})
+if (signinForm) {
+
+    signinForm.addEventListener('submit', e => {
+
+        e.preventDefault();
+        let data = new FormData(signinForm);
+        let jdata = {};
+        data.forEach((value, key) => {
+            jdata[key] = value;
+
+        })
+        console.log(jdata);
+        fetch(base_url, {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(jdata),
+            mode: "cors",
+            cache: "no-cache",
+        })
+            .then(response => response.json())
+            .then(data => {
+                if(data.token.token){
+                    console.log(data);
+                    // return
+                    window.location.assign("./main.html");
+
+                }
+                localStorage.setItem("userInfo", JSON.stringify(data))
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    });
+}
+
+
+    </script>
+
+</body>
+</html>

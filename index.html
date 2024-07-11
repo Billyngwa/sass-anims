@@ -5,92 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/style.css">
-    <title>Lesson-12 Building forms</title>
+    <title>User Management system</title>
 </head>
 <body>
     <main>
         <h1 class="big-heading">Every Journey has a starting point.</h1>
 
-        <form action="#" method="post" class="sign-in-form">
+        <form action="#" method="post" class="sign-up-form">
             <p class="wlcm-msg-emoji">
                 <h1 class="welcome-message">Welcome back</h1>
                 <p class="emoji">😄</p>
             </p>
             <div class="sign-in-text">
                 <h1 class="sign-in">
-                    Add product
+                    Register
                 </h1>
                 <p class="signin-desc">
-                    <!-- Let's get you started  and straight to the icons. -->
+                    Let's get you started  and straight to the icons.
                 </p>
             </div>
             <p class="email">
-                <label for="prod-name">Product name</label>
-                <input type="text" placeholder="coffee Mug" required />
+                <label for="first-name">First name</label>
+                <input type="text" placeholder="" name="firstName" required />
             </p>
             <p class="email">
-                <label for="price">Price</label>
-                <input type="number" placeholder="00xaf" required/>
+                <label for="last-name">Last name</label>
+                <input type="text" placeholder="" name="lastName" required/>
             </p>
-            <!-- <p class="password">
-                <label for="password">password</label>
-                <input type="password" required/>
-            </p> -->
+            <p class="email">
+                <label for="email">email</label>
+                <input type="email" placeholder="example@gmail.com" name="email" required/>
+            </p>
             <p class="password">
-                <label for="product-decsription">Describe product</label>
-                <!-- <input type="password" required> -->
-                <textarea name="product-decsription" id="gos" cols="30" rows="10"></textarea>
-                <!-- <input type="file" /> -->
+                <label for="password">password</label>
+                <input type="password" name="password" required/>
             </p>
-            <!-- <p class="password ">
-                <label for="sex">sex</label>
-                <p class="sex">
-
-                    <input type="radio" name="gender" value="Male"  />Male
-                    <input type="radio" name="gender" value="Female"  />Female
-                </p>
-            </p> -->
-            <!-- <p class="password ">
-                <label for="frameworks">Frameworks</label>
-                <p class="sex">
-
-                    <input type="checkbox" name="skill" value="React"  />React
-                    <input type="checkbox" name="skill" value="Angular"  />Angular
-                    <input type="checkbox" name="skill" value="Vue Js"  />Vue Js
-
-                </p>
-            </p> -->
-            <!-- <p class="dropdown">
-                <label for="category">Category</label>
-                <select name="Level" id="level" class="select-category">
-                    <option value="Junior Intern">Junior Intern</option>
-                    <option value="Junior Developer" selected>Junior Developper</option>
-                    <option value="Senior front-end dev">Senior Developper</option>
-                    <option value="Dev-ups">Dev ups</option>
-                    <option value="STP">STP</option>
-                </select>
-
-            </p> -->
-            <!-- <div class="rem-me">
-                <p class="left-col">
-                    <i class="fa-solid fa-square-check"></i>                   
-                     <small>Remember me</small>
-                </p>
-                <p class="forgot-pwsd">
-                    <a href="#">Forgot your password?</a>
-                </p>
-            </div> -->
             <p class="btn">
-                <button type="submit">Add Product <i class="fa-solid fa-right-to-bracket"></i></button>
+                <button type="submit">Register<i class="fa-solid fa-right-to-bracket"></i></button>
             </p>
-            <!-- <p class="dont-have-account">
-                Don't have an account? <a href="#">Sign up and get started!</a>
-            </p> -->
+            <p class="dont-have-account">
+                Already have an account? <a href="./pages/signin.html">Sign in </a>
+            </p>
         </form>
-
-        <div class="anim"><a href="./pages/main.html">click to go on main page</a></div>
-        <div class="dodge">click to stay here</div>
-
     </main>
     <script src="https://kit.fontawesome.com/a14b3ad818.js" crossorigin="anonymous"></script>
     <script src="./app.js"></script>

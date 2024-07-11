@@ -4,35 +4,7 @@
 @import "./settings/animations";
 @import "./main/desktop-tablet";
 
-div.anim{
-    height: 100px;
-    width: 100px;
-    background-color: teal;
-    border-radius: 5px;
-    margin:40px 30px;
-    position: relative;
-    animation-name: box-rotator;
-    animation-duration:2s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction:alternate-reverse;
-}
-div.dodge{
 
-    background-color: black;
-    height: 100px;
-    width: 100px;
-    background-color: teal;
-    border-radius: 5px;
-    margin:40px 30px;
-    position: relative;
-    animation-name: bubble-player;
-    animation-duration:3s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    animation-direction:alternate;
-
-}
 
 /* code initialisation */
 *{
@@ -40,6 +12,32 @@ div.dodge{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+.imageAbsolute{
+    position:relative;
+    &:hover{
+        div.absolute{
+            display: block;
+        }
+    }
+    div.absolute{
+        display: none;
+        position:absolute;
+        right: 0.3rem;
+        color:orange;
+        background-color: teal;
+        padding: 1.5rem;
+
+        button[type="button"]{
+            background-color: orange;
+            outline:none;
+            border: none;
+            padding: 5px;
+            border-radius: 3px;
+            color: white;
+        }
+
+    }
 }
 
 .big-heading{
@@ -49,7 +47,7 @@ div.dodge{
 
 form.sign-in-form {
     width: 40%;
-    margin: 50px auto;
+    margin-left:30%;
     background-color: rgba(206, 228, 228, 0.388);
     padding: 20px;
     border-radius: 5px;
@@ -232,4 +230,17 @@ p.dont-have-account a{
 p.dont-have-account a:hover{
     color: rgb(74, 160, 236);
 
+}
+div.forgot-password{
+    @include varying-container(70%,10%);
+@include display-element-flex(space-between,center);
+
+div.show-password>input[type="checkbox"]{
+    background-color: rgba(128, 128, 128, 0.382);
+}
+div.passwordreset>a{
+    text-decoration: none;
+    font-family: $font-family;
+    font-size: 20px;
+}
 }
